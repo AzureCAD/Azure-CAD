@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Azure CAD — freelance CAD design by Sujay Patel: part modeling, reverse engineering, DFM review and drawings.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%90%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Azure CAD — Sujay Patel, Freelance CAD Designer">
+<meta property="og:description" content="Freelance CAD design: part modeling, reverse engineering, DFM review and drawings.">
 <title>Azure CAD — Sujay Patel, Freelance CAD Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,31 +34,34 @@
   }
   html{scroll-padding-top:env(safe-area-inset-top,0px);}
   *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
   body{
     margin:0; background:var(--paper); color:var(--ink);
-    font-family:'Space Grotesk',sans-serif;
+    font-family:'Space Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
     line-height:1.5; -webkit-font-smoothing:antialiased;
     background-color:var(--paper);
   }
-  .mono{font-family:'IBM Plex Mono',monospace;}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
   a{color:inherit;}
   .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
   header{
     position:sticky; top:0; top:env(safe-area-inset-top,0px);
+    background:var(--paper);
     background:color-mix(in srgb, var(--paper) 88%, transparent);
+    -webkit-backdrop-filter:blur(6px);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
     z-index:10;
   }
   header .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
   .brand{font-weight:600; font-size:1.05rem; text-decoration:none; letter-spacing:.01em;}
-  .brand .dim{color:var(--steel); font-family:'IBM Plex Mono',monospace; font-size:.85rem; margin-left:4px;}
+  .brand .dim{color:var(--steel); font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.85rem; margin-left:4px;}
   nav a{margin-left:24px; text-decoration:none; font-size:.9rem; color:var(--ink); opacity:.75;}
   nav a:hover{opacity:1;}
 
   .hero{padding:88px 0 64px; position:relative;}
   .hero .tag{
-    font-family:'IBM Plex Mono',monospace; font-size:.8rem; color:var(--steel);
+    font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.8rem; color:var(--steel);
     border:1px solid var(--line); display:inline-block; padding:4px 10px; border-radius:2px; margin-bottom:26px;
   }
   .hero h1{
@@ -72,14 +80,14 @@
   .drawing:active{cursor:grabbing;}
   .drawing canvas{display:block; width:100%; height:100%;}
   .drawing .hint{
-    position:absolute; bottom:0; right:4px; font-family:'IBM Plex Mono',monospace; font-size:.68rem;
+    position:absolute; bottom:0; right:4px; font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.68rem;
     color:var(--steel); opacity:.6; pointer-events:none;
   }
   @media (max-width:820px){ .drawing{display:none;} }
 
   section{padding:54px 0; border-top:1px solid var(--line);}
   .sec-head{display:flex; align-items:baseline; gap:14px; margin-bottom:30px;}
-  .sec-num{font-family:'IBM Plex Mono',monospace; color:var(--steel); font-size:.85rem;}
+  .sec-num{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--steel); font-size:.85rem;}
   h2{font-size:1.5rem; margin:0; font-weight:600;}
 
   .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
@@ -93,7 +101,7 @@
 
   .tools{display:flex; flex-wrap:wrap; gap:10px;}
   .tool{
-    font-family:'IBM Plex Mono',monospace; font-size:.82rem; border:1px solid var(--line);
+    font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.82rem; border:1px solid var(--line);
     padding:6px 12px; border-radius:2px; background:var(--steel-tint);
   }
 
@@ -105,14 +113,14 @@
     border-bottom:1px solid var(--line);
   }
   .work-info{padding:16px 18px;}
-  .work-info .label{font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--steel); margin-bottom:4px;}
+  .work-info .label{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.72rem; color:var(--steel); margin-bottom:4px;}
   .work-info h3{margin:0 0 4px; font-size:1rem;}
   .work-info p{margin:0; font-size:.85rem; opacity:.75;}
 
   .process{display:flex; flex-direction:column; gap:0;}
   .step{display:flex; gap:20px; padding:16px 0; border-top:1px solid var(--line);}
   .step:first-child{border-top:none;}
-  .step .n{font-family:'IBM Plex Mono',monospace; color:var(--steel); font-size:.9rem; width:28px; flex-shrink:0;}
+  .step .n{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--steel); font-size:.9rem; width:28px; flex-shrink:0;}
   .step h3{margin:0 0 4px; font-size:1rem;}
   .step p{margin:0; font-size:.9rem; opacity:.78;}
 
@@ -120,7 +128,7 @@
   footer .row{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px;}
   footer h2{font-size:1.7rem;}
   .contact-links a{display:block; margin-bottom:8px; text-decoration:none; font-size:.95rem; border-bottom:1px solid var(--line); padding-bottom:6px; width:fit-content;}
-  .fine{font-family:'IBM Plex Mono',monospace; font-size:.75rem; opacity:.55; margin-top:40px;}
+  .fine{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.75rem; opacity:.55; margin-top:40px;}
 
   .inquiry{border:1px solid var(--line); border-radius:3px; background:var(--card); padding:26px; margin-top:34px;}
   .inquiry h3{margin:0 0 4px; font-size:1.05rem;}
@@ -128,14 +136,14 @@
   .f-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
   @media (max-width:600px){.f-grid{grid-template-columns:1fr;}}
   .f-field{display:flex; flex-direction:column; gap:6px; margin-bottom:16px;}
-  .f-field label{font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--steel);}
+  .f-field label{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.72rem; color:var(--steel);}
   .f-field input, .f-field textarea{
-    font-family:'Space Grotesk',sans-serif; font-size:.92rem; padding:10px 12px;
+    font-family:'Space Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif; font-size:.92rem; padding:10px 12px;
     border:1px solid var(--line); border-radius:2px; background:var(--paper); color:var(--ink);
   }
   .f-field textarea{resize:vertical; min-height:90px;}
-  .f-submit{margin-top:4px; cursor:pointer; font-family:'Space Grotesk',sans-serif;}
-  .f-note{font-family:'IBM Plex Mono',monospace; font-size:.72rem; opacity:.55; margin-top:12px;}
+  .f-submit{margin-top:4px; cursor:pointer; font-family:'Space Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;}
+  .f-note{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.72rem; opacity:.55; margin-top:12px;}
 
   .feature{border:1px solid var(--line); border-radius:3px; background:var(--card); margin-bottom:18px; overflow:hidden; box-shadow:0 1px 3px rgba(20,25,30,.06);}
   .feature-imgs{display:grid; grid-template-columns:1fr 1.25fr; border-bottom:1px solid var(--line);}
@@ -145,11 +153,11 @@
   @media (max-width:720px){.feature-imgs figure + figure{border-left:none; border-top:1px solid var(--line);}}
   .feature-imgs img{width:100%; height:100%; object-fit:contain; display:block;}
   .feature-info{padding:20px 22px;}
-  .feature-info .label{font-family:'IBM Plex Mono',monospace; font-size:.75rem; color:var(--steel); margin-bottom:6px;}
+  .feature-info .label{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.75rem; color:var(--steel); margin-bottom:6px;}
   .feature-info h3{margin:0 0 8px; font-size:1.25rem;}
   .feature-info p{margin:0 0 12px; font-size:.95rem; opacity:.8; max-width:62ch;}
   .specs{display:flex; flex-wrap:wrap; gap:8px;}
-  .specs span{font-family:'IBM Plex Mono',monospace; font-size:.75rem; border:1px solid var(--line); padding:4px 9px; border-radius:2px; background:var(--steel-tint);}
+  .specs span{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.75rem; border:1px solid var(--line); padding:4px 9px; border-radius:2px; background:var(--steel-tint);}
   .work-grid{grid-template-columns:repeat(2,1fr) !important;}
   @media (max-width:720px){.work-grid{grid-template-columns:1fr !important;}}
 </style>
@@ -275,12 +283,15 @@
 <script>
 (function(){
   var el = document.getElementById('hero3d');
-  if (!el || !window.THREE) return;
+  if (!el) return;
+  if (!window.THREE) { el.style.display='none'; return; }
   var w = el.clientWidth, h = el.clientHeight;
   var scene = new THREE.Scene();
   var camera = new THREE.PerspectiveCamera(32, w/h, 0.1, 100);
   camera.position.set(0, 0.5, 6);
-  var renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
+  var renderer;
+  try { renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true }); }
+  catch(err){ el.style.display='none'; return; }
   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, 2));
   renderer.setSize(w, h);
   el.appendChild(renderer.domElement);
@@ -327,6 +338,7 @@
 
   group.rotation.set(-0.25, 0.55, 0);
 
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var dragging = false, px=0, py=0, autorotate = true, vx=0.004, vy=0.012;
   function down(x,y){ dragging=true; autorotate=false; px=x; py=y; }
   function move(x,y){
@@ -344,7 +356,7 @@
   function animate(){
     requestAnimationFrame(animate);
     if (!dragging){
-      if (autorotate) group.rotation.y += 0.0055;
+      if (autorotate && !reduce) group.rotation.y += 0.0055;
       else { group.rotation.y += vy; group.rotation.x += vx; vy*=0.94; vx*=0.94; }
     }
     renderer.render(scene, camera);
